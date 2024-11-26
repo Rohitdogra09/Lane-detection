@@ -55,6 +55,7 @@ def region_of_interest(image):
     masked_image=cv2.bitwise_and(image, mask) #
     return masked_image
 
+# This if for detect lane in image
 '''image = cv2.imread('test_image.jpg')
 lane_image=np.copy(image)
 canny_image=canny(lane_image)
@@ -66,6 +67,7 @@ combo_image=cv2.addWeighted(lane_image, 0.8, line_image, 1, 1)
 cv2.imshow("result", combo_image)
 cv2.waitKey(0)'''
 
+#Detect lane in video
 cap=cv2.VideoCapture("test2.mp4")
 while(cap.isOpened()):
     _, frame=cap.read()
